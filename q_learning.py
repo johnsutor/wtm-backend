@@ -16,7 +16,7 @@ NSR = 6
 
 # Array of each experience and restaurant type,
 # respectively
-EXPEREINCES = [
+EXPERIENCES = [
     'Movie',
     'Ice Skate',
     'Escape Room',
@@ -104,7 +104,7 @@ def initialize_q_learning(price, time):
 
     # Convert the restaurant and experience to string form
     experience = EXPERIENCES[experience]
-    restaurant =RESTAURANTS[restaurant]
+    restaurant = RESTAURANTS[restaurant]
 
     return q_table_e, q_table_r, experience, restaurant, episode
 
@@ -120,7 +120,7 @@ def step_q_learning(q_table_e, q_table_r, last_s, last_e, last_r, satisfaction, 
     # Update the q table based on the last state
     # Convert the string of the experience and restaurant from
     # string form to numeric form
-    last_e = EXPEREINCES.index(last_e)
+    last_e = EXPERIENCES.index(last_e)
     last_r = RESTAURANTS.index(last_r)
 
     # Determine the reward based on the satisfaction
@@ -151,7 +151,7 @@ def step_q_learning(q_table_e, q_table_r, last_s, last_e, last_r, satisfaction, 
 
     # Convert the restaurant and experience to string form
     experience = EXPERIENCES[experience]
-    restaurant =RESTAURANTS[restaurant]
+    restaurant = RESTAURANTS[restaurant]
 
     return q_table_e, q_table_r, er, experience, restaurant
 
