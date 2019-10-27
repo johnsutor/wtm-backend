@@ -106,7 +106,7 @@ def initialize_q_learning(price, time):
     experience = EXPERIENCES[experience]
     restaurant = RESTAURANTS[restaurant]
 
-    return q_table_e, q_table_r, experience, restaurant, episode
+    return q_table_e, q_table_r, experience, restaurant, episode, state
 
 # Iterate through one step of the learning process
 def step_q_learning(q_table_e, q_table_r, last_s, last_e, last_r, satisfaction, episode, price, time):
@@ -153,5 +153,5 @@ def step_q_learning(q_table_e, q_table_r, last_s, last_e, last_r, satisfaction, 
     experience = EXPERIENCES[experience]
     restaurant = RESTAURANTS[restaurant]
 
-    return q_table_e, q_table_r, er, experience, restaurant
+    return q_table_e, q_table_r, experience, restaurant, episode, state
 
