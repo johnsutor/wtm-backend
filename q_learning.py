@@ -102,6 +102,10 @@ def initialize_q_learning(price, time):
     # Convert the q_tables to lists (for JSON)
     q_table_r, q_table_e = q_table_r.tolist(), q_table_e.tolist()
 
+    # Convert the restaurant and experience to string form
+    experience = EXPERIENCES[experience]
+    restaurant =RESTAURANTS[restaurant]
+
     return q_table_e, q_table_r, experience, restaurant, episode
 
 # Iterate through one step of the learning process
@@ -146,7 +150,8 @@ def step_q_learning(q_table_e, q_table_r, last_s, last_e, last_r, satisfaction, 
     q_table_r, q_table_e = q_table_r.tolist(), q_table_e.tolist()
 
     # Convert the restaurant and experience to string form
-    # experience = 
+    experience = EXPERIENCES[experience]
+    restaurant =RESTAURANTS[restaurant]
 
     return q_table_e, q_table_r, er, experience, restaurant
 
