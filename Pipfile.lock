@@ -141,7 +141,7 @@
                 "sha256:ab98d84ee449b2e42f352a34fdefc3b6a5fb28041f40619b33d2d09b1a35bd31"
             ],
             "index": "pypi",
-            "version": "==1.3.0"
+            "version": "==1.3.0.post2"
         },
         "werkzeug": {
             "hashes": [
