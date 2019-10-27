@@ -1,8 +1,10 @@
 from q_learning import initialize_q_learning, step_q_learning
 
 from flask import Flask, jsonify, request, abort
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Initialize the q tables
 @app.route('/api/v1.0/initialize', methods=['POST'])
